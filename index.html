@@ -1,1 +1,122 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Statement Converter | Convert Bank Statements Easily</title>
+  <meta name="description" content="Free Bank Statement Converter tool to convert your bank statements into Excel, PDF, CSV, or Word format. Fast, secure, and easy-to-use online converter.">
+  <meta name="keywords" content="bank statement converter, convert bank statement, pdf to excel bank statement, statement to word, csv bank statement converter, free tool">
+  <style>
+    /* Reset & Base */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9;}
+    a {text-decoration: none; color: #0073e6;}
+    h1, h2 {color: #222;}
+    p {margin-bottom: 1rem;}
+
+    /* Header */
+    header {background: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    header nav a {margin-left: 20px; font-weight: bold;}
+
+    /* Hero */
+    .hero {text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #0073e6, #00bcd4); color: #fff;}
+    .hero h1 {font-size: 2.2rem; margin-bottom: 15px;}
+    .hero p {font-size: 1.2rem;}
+
+    /* Converter Box */
+    .converter {max-width: 600px; margin: 40px auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+    .converter h2 {margin-bottom: 15px; font-size: 1.5rem;}
+    .converter input[type="file"] {margin: 15px 0;}
+    .btn {background: #0073e6; color: #fff; padding: 10px 18px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;}
+    .btn:hover {background: #005bb5;}
+
+    /* Content */
+    .content {max-width: 900px; margin: 40px auto; padding: 0 20px;}
+    .content h2 {margin: 20px 0 10px;}
+    .content ul {margin: 15px 0 20px 20px; list-style-type: disc;}
+
+    /* Footer */
+    footer {background: #222; color: #eee; text-align: center; padding: 20px; margin-top: 40px;}
+    footer a {color: #00bcd4;}
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header nav a {margin-left: 10px; font-size: 0.9rem;}
+      .hero h1 {font-size: 1.8rem;}
+      .converter {margin: 20px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><strong>Statement Tools</strong></div>
+    <nav>
+      <a href="https://convertebankstatement.com/banks.html">Bank Statement Converter</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Free Online Bank Statement Converter</h1>
+    <p>Convert your bank statements into Excel, Word, CSV, or PDF format instantly.</p>
+  </section>
+
+  <!-- Converter Box -->
+  <section class="converter">
+    <h2>Upload Your Bank Statement</h2>
+    <input type="file" id="fileInput" accept=".pdf,.csv,.xls,.xlsx">
+    <button class="btn" onclick="convertStatement()">Convert Now</button>
+    <p id="result" style="margin-top:15px; font-weight: bold;"></p>
+  </section>
+
+  <!-- SEO Optimized Content -->
+  <section class="content">
+    <h2>About Our Bank Statement Converter</h2>
+    <p>The <strong>Bank Statement Converter</strong> is a free, secure, and fast online tool that helps you transform your financial statements into different formats such as Excel, Word, CSV, or PDF. Whether you are an accountant, business owner, or student, this tool saves you valuable time by simplifying data extraction and formatting.</p>
+
+    <h2>Why Use a Bank Statement Converter?</h2>
+    <ul>
+      <li><strong>Save Time:</strong> Convert bank statements with just one click.</li>
+      <li><strong>Accuracy:</strong> Avoid manual data entry errors.</li>
+      <li><strong>Multiple Formats:</strong> Get your statement in Excel, Word, CSV, or PDF.</li>
+      <li><strong>Secure:</strong> Files are processed safely with no third-party sharing.</li>
+    </ul>
+
+    <h2>Common Use Cases</h2>
+    <p>This tool is ideal for:</p>
+    <ul>
+      <li>Preparing financial reports</li>
+      <li>Submitting loan applications</li>
+      <li>Bookkeeping and accounting</li>
+      <li>Personal finance management</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>Simply upload your bank statement, click “Convert Now,” and download your converted file in your preferred format. It’s that simple!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bank Statement Converter. All Rights Reserved. | Powered by <a href="https://convertebankstatement.com/">convertebankstatement.com</a></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function convertStatement() {
+      const fileInput = document.getElementById("fileInput");
+      const result = document.getElementById("result");
+
+      if (fileInput.files.length === 0) {
+        result.textContent = "⚠️ Please upload a bank statement file.";
+        result.style.color = "red";
+      } else {
+        const fileName = fileInput.files[0].name;
+        result.textContent = "✅ " + fileName + " converted successfully!";
+        result.style.color = "green";
+      }
+    }
+  </script>
+</body>
+</html>
